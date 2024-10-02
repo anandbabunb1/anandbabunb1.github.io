@@ -10,59 +10,73 @@
             background-color: #f5f5dc; /* Light cream color */
             color: #333333; /* Dark gray for text */
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
+            padding: 10px; /* Reduce padding to fit more content */
+            margin: 0;
         }
 
-        /* Style for the container holding the image and the content */
+        /* Container holding the image and the content */
         .container {
             display: flex;
             align-items: flex-start;
-            padding: 20px;
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+            padding: 10px;
         }
         
         /* Style for the image */
         .container img {
-            margin-right: 20px; /* Spacing between the image and the content */
+            margin-right: 10px; /* Reduce spacing */
+            width: 150px; /* Limit image size */
+            height: auto;
         }
         
-        /* Style for the text content next to the image */
+        /* Content next to the image */
         .content {
-            max-width: 600px; /* You can adjust this value to control the content width */
-        }
-        
-        /* Adjusting the table style */
-        table {
-            margin-bottom: 20px;
+            max-width: 500px; /* Control content width */
         }
 
-        h1 {
-            color: #003366; /* Navy blue for main headings */
-            margin-top: 10px;
+        /* Adjust the table style */
+        table {
+            margin-bottom: 15px; /* Reduce table margin */
         }
 
         h3 {
-            color: #003366; /* Navy blue for subheadings */
-            margin-top: 10px;
+            color: #003366; /* Navy blue for all headings */
+            margin: 5px 0; /* Reduce heading margin */
         }
 
         p, td {
             color: #333333; /* Dark gray for paragraphs and table text */
+            margin: 5px 0;
         }
 
-        /* Add some margin to the horizontal line */
         hr {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc; /* Light gray horizontal line */
+            margin: 10px 0; /* Reduce margin around the horizontal line */
+            border: 0.5px solid #ccc;
         }
 
         a {
-            color: #0056b3; /* Blue for links */
+            color: #003366; /* Match the color of Overview section headings */
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack content on smaller screens */
+            }
+
+            .container img {
+                width: 100px; /* Smaller image size for mobile */
+            }
+
+            .content {
+                max-width: 100%; /* Allow content to expand fully */
+            }
         }
     </style>
 </head>
@@ -71,16 +85,16 @@
 <div class="container">
     <!-- Image on the left -->
     <p>
-        <img src="anand_babu.jpg" width="200" alt="Anand Babu">
+        <img src="anand_babu.jpg" alt="Anand Babu">
     </p>
 
     <!-- Content on the right -->
     <div class="content">
         <!-- Name and horizontal line above the Contact section -->
         <h1>Anand Babu.N.B</h1>
-        <hr> <!-- Horizontal line -->
+        <hr>
 
-        <h1>Contact</h1>
+        <h3>Contact</h3>
         <table>
             <tr><td><strong>Email:</strong> anandbabu AT nitc DOT ac DOT in</td></tr>
             <tr><td><strong>Office:</strong> CSE-202B, NIT Calicut</td></tr>
@@ -88,7 +102,7 @@
 
         <hr> <!-- Horizontal line before Overview -->
 
-        <h1>Overview</h1>
+        <h3>Overview</h3>
         <p>
             I am an Assistant Professor in the Department of Computer Science and Engineering, National Institute of Technology Calicut.
         </p>
@@ -101,13 +115,9 @@
         <h3><b><a href="#">Research Interests</a></b></h3>
         Combinatorics, Graph Theory, Algorithms
 
-        <td style="background-color: white;">
-            <h3><b><strong><a href="https://scholar.google.de/citations?user=3PHhwFwAAAAJ&hl=en">Publications</a></strong></b></h3>
-        </td>
+        <h3><b><strong><a href="https://scholar.google.de/citations?user=3PHhwFwAAAAJ&hl=en">Publications</a></strong></b></h3>
 
-        <td style="background-color: white;">
-            <h3><b><strong><a href="#Teaching">Teaching</a></strong></b></h3>
-        </td>
+        <h3><b><strong><a href="#Teaching">Teaching</a></strong></b></h3>
     </div>
 </div>
 
